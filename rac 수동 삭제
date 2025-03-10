@@ -1,0 +1,43 @@
+--rac수동 삭제
+--root 유저로 마지막 노드를 제외한 모든 노드에서 실행 
+ cd $GRID_HOME/crs/install 
+
+# SORACLE_HOME/per:|/bin/per I rootcrs . pl -deconf ig -force 
+SORACLE_HOME/crs/instal |/rootcrs.sh -deconfig -force 
+--root 유저로 마지막 노드에서 수행 
+ 
+cd $GRID_HOME/crs/install 
+ # $GRID_HOME/perI/bin/per I rootcrs .pl -deconfig -force -|astnode 9 $GRID_HOME/crs/install/rootcrs.sh -deconf is -force -lastnode 
+--root 유저로 oracle에서 생성한 파일 삭제 
+ rm -rf /etc/oralnst. loc 
+ rm -rf /etc/oracle 
+ rm -rf /etc/oracleafd.cont 
+ rm -rf /etc/oratab 
+ rm -rf /etc/init.d/init.tfa 
+ rm -rf /etc/init.d/afd 
+ rm -rf /etc/init.d/ohasd 
+ rm -rf /etc/init.d/ init. chasd 
+ rm -rf $ORACLE_BASE 
+ rm -rf SGRID_HOME 
+ 
+--root 유저로 디스크 초기화 
+ dd if=/dev/zero of=/dev/mapper/archvg01* bs=1024k count=1000 
+--root 유저로 디스크 초기화 
+dd if-/dev/zero of=/dev/mapper/archvg01* bs=1024k count=1000 
+dd if=/dev/zero of=/dev/mapper/oradatavg01x bs=1024k count=1000 
+dd if=/dev/zero of=/dev/mapper/ar idvgxbs=1024k_count=1000 
+dd if=/dev/zero of=/dev/mapper/recovg01* bs=1024k count=1000 
+dd if=/dev/zero of=/dev/mapper/recovg02* bs=1024k count=1000 
+dd if=/dev/zero of=/dev/dm-6 bs=1024k count=1000 
+dd if=/dev/zero of=/dev/dm-7 bs=1024k count=1000 
+dd if=/dev/zero of=/dev/dm-8 bs=1024k count=1000 
+dd if=/dev/zero of=/dev/mapper/recovg01* bs=1024k count=1000 
+dd if=/dev/zero of=/dev/mapper/recovg02* bs=1024k count=1000 
+systemctl stop oracle-tfaservice 
+rm -fr $ORACLE_HOME 
+rm -fr BORACLE_BASE 
+rm -f /etc/oralnst.loc /etc/oratab 
+rm -f/usr/bin/orachk /usr/bin/tfactI 
+rm -fr /etc/oracle 
+rm -fr /var/tmp/ .oracle /var/opt/oracle 
+rm -fr /opt/ORCLfmap/opt/oracle/opt/oracle.ahf 
